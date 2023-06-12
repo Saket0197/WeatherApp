@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather App</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <div class="container">
+
+            <h1>Check Weather For Your Location</h1>
+
+            <!-- search buttons -->
+            <div class="search-options">
+                <input type="radio" name="search-option" class="your-weather" id="your-weather" checked>
+                <label for="your-weather">Your Weather</label>
+                <input type="radio" name="search-option" class="search-weather" id="search-weather">
+                <label for="search-weather">Search Weather</label>
+            </div>
+
+            <!-- search-bar -->
+            <form class="search-form">
+                <input type="text" class="search-city" autocomplete="off" spellcheck="false">
+                <div class="search"><img src="./Assets/search.png"></div>
+            </form>
+
+            <!-- Grant Access UI -->
+            <div class="grant-access-ui">
+                <img src="./Assets/location.png">
+
+                <div class="grant-location-texts">
+                    <p class="text-1">Grant Location Access</p>
+                    <p class="text-2">Allow Access to get weather Information</p>
+                </div>
+
+                <div class="access-btn">Grant Access</div>
+
+            </div>
+
+            <!-- Weather UI -->
+            <div class="weather-info-container">
+
+                <img src="./Assets/loading.gif" class="loader">
+
+                <div class="weather-info">
+
+                    <div class="city-info">
+                        <span class="city-name" data-city-name></span>
+                        <img src="" class="flag-icon" data-city-flag>
+                    </div>
+
+                
+                    <div class="weather-description" data-description></div>
+                    <div class="weather-icon-container"><img src="" class="weather-icon" data-weather-icon></div>
+                    <div class="temperature" data-temperature></div>
+
+                    <div class="windspeed-info">
+                        <img src="./Assets/wind.png">
+                        <div class="text wind-text">windspeed</div>
+                        <div class="info windspeed" data-windspeed></div>
+                    </div>
+
+                    <div class="humidity-info">
+                        <img src="./Assets/humidity.png">
+                        <div class="text humidity-text">humidity</div>
+                        <div class="info humidity" data-humidity></div>
+                    </div>
+
+                    <div class="clouds-info">
+                        <img src="./Assets/cloud.png">
+                        <div class="text clouds-text">clouds</div>
+                        <div class="info clouds" data-clouds></div>
+                    </div>
+
+                </div>
+
+                <img src="./Assets/not-found.png" class="no-weather-info">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
