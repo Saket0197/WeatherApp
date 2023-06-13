@@ -9,11 +9,11 @@
 }
 
 .wrapper{
-    height: 125vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
 }
 
@@ -72,7 +72,7 @@
 }
 
 .search-form{
-    width: 60%;
+    width: 55%;
     height: 2.5rem;
     padding: 0 1.25rem;
     margin-bottom: 4rem;
