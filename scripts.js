@@ -172,6 +172,9 @@ searchBtn.addEventListener('click',() => {
     if(searchCity.value) {
         fetchData(null,null,searchCity.value);
     }
+    else if(weatherInfo.classList.contains('display')){
+        weatherInfo.classList.remove('display');
+    }
 });
 
 // submitting form data
@@ -180,7 +183,9 @@ searchForm.addEventListener('submit',(event)=>{
     if(searchCity.value) {
         fetchData(null,null,searchCity.value);
     }
-    
+    else if(weatherInfo.classList.contains('display')){
+        weatherInfo.classList.remove('display');
+    }
 });
 
 initiate();
