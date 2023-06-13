@@ -16,21 +16,21 @@
 
             <!-- search buttons -->
             <div class="search-options">
-                <input type="radio" name="search-option" class="your-weather" id="your-weather" checked>
+                <input type="radio" name="search-option" class="search-option your-weather" id="your-weather" checked>
                 <label for="your-weather">Your Weather</label>
-                <input type="radio" name="search-option" class="search-weather" id="search-weather">
+                <input type="radio" name="search-option" class="search-option search-weather" id="search-weather">
                 <label for="search-weather">Search Weather</label>
             </div>
 
             <!-- search-bar -->
             <form class="search-form">
-                <input type="text" class="search-city" autocomplete="off" spellcheck="false">
-                <div class="search"><img src="./Assets/search.png"></div>
+                <input type="text" class="search-city" placeholder="Enter City Name" autocomplete="off" spellcheck="false">
+                <img src="./Assets/search.png" class="search-btn">
             </form>
 
             <!-- Grant Access UI -->
             <div class="grant-access-ui">
-                <img src="./Assets/location.png">
+                <img src="./Assets/location.png" class="location-logo">
 
                 <div class="grant-location-texts">
                     <p class="text-1">Grant Location Access</p>
@@ -54,27 +54,31 @@
                     </div>
 
                 
-                    <div class="weather-description" data-description></div>
-                    <div class="weather-icon-container"><img src="" class="weather-icon" data-weather-icon></div>
-                    <div class="temperature" data-temperature></div>
+                    <div class="text-center weather-description" data-description></div>
+                    <div class="text-center weather-icon-container"><img src="" class="weather-icon" data-weather-icon></div>
+                    <div class="text-center temperature" data-temperature></div>
 
-                    <div class="windspeed-info">
-                        <img src="./Assets/wind.png">
-                        <div class="text wind-text">windspeed</div>
-                        <div class="info windspeed" data-windspeed></div>
-                    </div>
+                   <div class="weather-cards">
 
-                    <div class="humidity-info">
-                        <img src="./Assets/humidity.png">
-                        <div class="text humidity-text">humidity</div>
-                        <div class="info humidity" data-humidity></div>
-                    </div>
+                        <div class="card windspeed-info">
+                            <img src="./Assets/wind.png" class="card-img">
+                            <div>windspeed</div>
+                            <div data-windspeed></div>
+                        </div>
 
-                    <div class="clouds-info">
-                        <img src="./Assets/cloud.png">
-                        <div class="text clouds-text">clouds</div>
-                        <div class="info clouds" data-clouds></div>
-                    </div>
+                        <div class="card humidity-info">
+                            <img src="./Assets/humidity.png" class="card-img">
+                            <div>humidity</div>
+                            <div data-humidity></div>
+                        </div>
+
+                        <div class="card clouds-info">
+                            <img src="./Assets/cloud.png" class="card-img">
+                            <div>clouds</div>
+                            <div data-clouds></div>
+                        </div>
+
+                   </div>
 
                 </div>
 
