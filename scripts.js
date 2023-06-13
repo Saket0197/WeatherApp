@@ -2,7 +2,7 @@ const yourWeather = document.querySelector('.your-weather');
 const searchWeather = document.querySelector('.search-weather');
 const searchForm = document.querySelector('.search-form');
 const searchCity = document.querySelector('.search-city');
-const searchBtn = document.querySelector('.search');
+const searchBtn = document.querySelector('.search-btn');
 const grantAccessUi = document.querySelector('.grant-access-ui');
 const accessBtn = document.querySelector('.access-btn');
 const noWeatherInfo = document.querySelector('.no-weather-info');
@@ -79,6 +79,18 @@ async function fetchData(lati=null,longi=null,cityName=null){
     let api_url = null;
 
     loader.classList.add('display');
+
+    if(grantAccessUi.classList.contains('display')){
+        grantAccessUi.classList.remove('display');
+    }
+
+    if(weatherInfo.classList.contains('display')){
+        weatherInfo.classList.remove('display');
+    }
+
+    if(noWeatherInfo.classList.contains('display')) {
+        noWeatherInfo.classList.remove('display');
+    }
     
     if(lati !== null && longi !== null) {
         api_url = `https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&appid=${api_key}`;
@@ -154,13 +166,17 @@ accessBtn.addEventListener('click',() => {
 });
 
 searchBtn.addEventListener('click',() => {
-    fetchData(null,null,searchCity.value);
+    if(searchCity.value) {
+        fetchData(null,null,searchCity.value);
+    }
 });
 
 // submitting form data
 searchForm.addEventListener('submit',(event)=>{
     event.preventDefault();
-    fetchData(null,null,searchCity.value);
+    if(searchCity.value) {
+        fetchData(null,null,searchCity.value);
+    }
     
 });
 
