@@ -128,7 +128,7 @@ function switchTabs() {
         if(grantAccessUi.classList.contains('display')){
             grantAccessUi.classList.remove('display');
         }
-        else if(weatherInfo.classList.contains('display')){
+        if(weatherInfo.classList.contains('display')){
             weatherInfo.classList.remove('display');
         }
         if(!searchForm.classList.contains('display')) {
@@ -148,6 +148,9 @@ function initiate(){
         navigator.geolocation.getCurrentPosition(getCoords,coordsNotFound);
         if(searchForm.classList.contains('display')) {
             searchForm.classList.remove('display');
+        }
+        if(noWeatherInfo.classList.contains('display')) {
+            noWeatherInfo.classList.remove('display');
         }
     }
 
