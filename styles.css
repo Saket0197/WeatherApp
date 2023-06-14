@@ -11,6 +11,7 @@
 .wrapper{
     min-height: 100vh;
     width: 100%;
+    overflow-x: hidden;
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -33,9 +34,9 @@
 
 .search-options{
     margin-top: 4rem;
-    width: 80%;
+    width: 65%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 6rem;
     align-items: center;
     padding: 0.75rem;
@@ -52,7 +53,7 @@
 
 .search-option + label{
     background-color: #dbe2ef80;
-    padding: 0.29rem 0.9rem;
+    padding: 0.29rem 0.7rem;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -72,7 +73,7 @@
 }
 
 .search-form{
-    width: 55%;
+    width: 60%;
     height: 2.5rem;
     padding: 0 1.25rem;
     margin-bottom: 4rem;
@@ -163,6 +164,7 @@
 
 .weather-info {
     flex-direction: column;
+    align-items: center;
 }
 
 .city-info{
@@ -198,13 +200,16 @@
 }
 
 .weather-cards{
+    height: 9.5rem;
+    width: 39.5rem;
+    padding: 0.75rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 
 .card{
-    height: 8.5rem;
+    height: 100%;
     width: 12.5rem;
     padding: 0.4rem;
     display: flex;
@@ -218,4 +223,78 @@
 .card-img{
     height: 3.125rem;
     width: 3.125rem;
+}
+
+@media only screen and (max-width: 735px) {
+    .weather-cards{
+        height: fit-content;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-options{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-form{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    h1{
+        font-size: 1.7rem;
+    }
+
+    .search-options{
+        width: 100%;
+        justify-content: space-between;
+        gap:4rem;
+        font-size: 0.72rem;
+    }
+
+    .search-form{
+        width: 100%;
+    }
+
+    .text-1{
+        font-size: 1.2rem;
+    }
+
+    .text-2{
+        font-size: 0.75rem;
+    }
+}
+
+@media only screen and (max-width: 385px) {
+    .search-options{
+        flex-wrap: wrap;
+        gap:1rem;
+        justify-content: space-around;
+        align-content: flex-start;
+    }
+
+    .text-center, .city-info{
+        font-size: 1.2rem;
+    }
+    
+    .search-btn{
+        margin-left: 1rem;
+    }
+
+    .search-city{
+        width: 80%;
+        padding: 0 0.75rem;
+        font-size: 0.75rem;
+    }
+
+    .text-1{
+        font-size: 1rem;
+    }
+
+    .text-2{
+        font-size: 0.75rem;
+    }
 }
